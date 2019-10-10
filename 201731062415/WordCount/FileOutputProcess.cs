@@ -13,17 +13,26 @@ namespace WordCount
 {
     class FileOutputProcess :ResultOutPutProcess
     {
+        private string path;
+        public FileOutputProcess(string path)
+        {
+            this.path = path;
+        }
         public override bool process(Context context)
         {
-            Console.WriteLine("内容输出到文件");
-            //输出文件位置
-            string path = @"E:\Gitprogram\WordCount\201731062415\WordCount\test.txt";
             FileInfo fileInfo = new FileInfo(path);
             StreamWriter sw = fileInfo.AppendText();
+            sw.WriteLine("文本基础信息如下");
+            foreach(KeyValuePair<string, int> entry in context.BaseInfo)
+            {
+                sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
+            }
+            sw.WriteLine("单词统计信息：");
             foreach (KeyValuePair<string, int> entry in context.WordCount)
             {
                 sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
             }
+            sw.Close();
             return true;
         }
     }

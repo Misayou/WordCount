@@ -13,8 +13,7 @@ namespace WordCount
     {
         public override bool process(Context context)
         {
-            FileInputProcess fileInput = new FileInputProcess();
-            fileInput.process(context);
+           
             throw new Exception("请使用具体输入处理");
             
         }

@@ -9,14 +9,23 @@ namespace WordCount
 {
     class FileInputProcess :InputProcess
     {
+
+        /// <summary>
+        /// 文件的读取路径
+        /// </summary>
+        private string path;
+
+        public FileInputProcess(string path)
+        {
+            this.path = path;
+        }
+
         public override bool process(Context context)
         {
-            Console.WriteLine("请输入文件路径:");
-            string path = Console.ReadLine();
-            Dictionary<string, int> keyValuePairs = new Dictionary<string, int>();
-            context.Info = File.ReadAllText(path);
-            context.WordCount = keyValuePairs;
-            Console.WriteLine("从文件输入处理" + context.Info);
+            //从文件中读取文本内容
+            context.FileInfo = File.ReadAllText(path);
+           
+            Console.WriteLine("文本内容如下" + context.FileInfo);
             //完成文本内容的读取后，交由下一个处理
             getNextHandler().process(context);
             return true;
