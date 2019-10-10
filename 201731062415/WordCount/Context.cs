@@ -19,5 +19,7 @@ namespace WordCount
         private Dictionary<string, int> wordCount;
 
         public string Info { get => info; set => info = value; }
+
+        public Dictionary<string, int> WordCount { get => wordCount; set => wordCount = value; }
     }
 }
