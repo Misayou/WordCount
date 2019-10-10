@@ -14,9 +14,15 @@ namespace WordCount
         {
             
             Context context = new Context();
-            
+            Console.WriteLine("请输入源文件的路径");
+            string inpath = Console.ReadLine();
+            Console.WriteLine("请输入结果输出的文件,如F:\\out.txt");
+            string outpath = Console.ReadLine();
 
-            WordCount wordCount = new WordCount(new FileInputProcess(),new AnalyzeProcess(),new FileOutputProcess(), context);
+            InputProcess inputProcess= new FileInputProcess(inpath);
+            ResultOutPutProcess outPutProcess = new FileOutputProcess(outpath);
+
+            WordCount wordCount = new WordCount(inputProcess, new AnalyzeProcess(),outPutProcess, context);
             wordCount.process();
             Console.ReadLine();
         }
