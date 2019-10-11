@@ -39,13 +39,16 @@ namespace WordCount
             string[] words = Regex.Split(context.FileInfo, @"\W+");
             foreach (string word in words)
             {
-                if (context.WordCount.ContainsKey(word))
+                if(word.Length>=4)
                 {
-                    context.WordCount[word]++;
-                }
-                else
-                {
-                    context.WordCount[word] = 1;
+                    if (context.WordCount.ContainsKey(word))
+                    {
+                        context.WordCount[word]++;
+                    }
+                    else
+                    {
+                        context.WordCount[word] = 1;
+                    }
                 }
             }
 
