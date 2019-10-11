@@ -11,6 +11,13 @@ namespace WordCount
     /// </summary>
     class AnalyzeProcess : Handler
     {
+
+
+        private int m; //统计词组的长度
+        public AnalyzeProcess(int m)
+        {
+            this.m = m;
+        }
         /// <summary>
         /// 统计字符数数量
         /// </summary>
