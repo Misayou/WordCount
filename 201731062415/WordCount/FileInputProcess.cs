@@ -25,7 +25,7 @@ namespace WordCount
             //从文件中读取文本内容
             context.FileInfo = File.ReadAllText(path);
            
-            Console.WriteLine("文本内容如下" + context.FileInfo);
+            //Console.WriteLine("文本内容如下" + context.FileInfo);
             //完成文本内容的读取后，交由下一个处理
             getNextHandler().process(context);
             return true;

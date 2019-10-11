@@ -37,9 +37,14 @@ namespace WordCount
         private void countWords(Context context)
         {
             string[] words = Regex.Split(context.FileInfo, @"\W+");
+            context.BaseInfo.Add("words", 0);
             foreach (string word in words)
             {
-                if(word.Length>=4)
+                if (word != "")
+                {
+                    context.BaseInfo["words"]++;
+                } 
+                if(word.Length >= 4)
                 {
                     if (context.WordCount.ContainsKey(word))
                     {
@@ -50,6 +55,7 @@ namespace WordCount
                         context.WordCount[word] = 1;
                     }
                 }
+                      
             }
 
          
@@ -63,7 +69,7 @@ namespace WordCount
         {
 
             MatchCollection mch = Regex.Matches(context.FileInfo, "\n");
-            context.BaseInfo.Add("lines", mch.Count);
+            context.BaseInfo.Add("lines", mch.Count+1);
         }
 
        
@@ -83,7 +89,7 @@ namespace WordCount
             countWords(context);
             countLines(context);
 
-            context.BaseInfo.Add("words", context.WordCount.Count);
+            
             //交由下一步处理
             getNextHandler().process(context);
             return true;

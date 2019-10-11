@@ -26,3 +26,10 @@ E:\我的vs程序\done by teacher\WordCount\201731062415\WordCount\obj\Debug\Wor
 E:\我的vs程序\done by teacher\WordCount\201731062415\WordCount\obj\Debug\WordCount.csproj.CoreCompileInputs.cache
 E:\我的vs程序\done by teacher\WordCount\201731062415\WordCount\obj\Debug\WordCount.exe
 E:\我的vs程序\done by teacher\WordCount\201731062415\WordCount\obj\Debug\WordCount.pdb
+E:\Gitprogram\WordCount\201731062415\WordCount\bin\Debug\WordCount.exe.config
+E:\Gitprogram\WordCount\201731062415\WordCount\bin\Debug\WordCount.exe
+E:\Gitprogram\WordCount\201731062415\WordCount\bin\Debug\WordCount.pdb
+E:\Gitprogram\WordCount\201731062415\WordCount\obj\Debug\WordCount.csprojAssemblyReference.cache
+E:\Gitprogram\WordCount\201731062415\WordCount\obj\Debug\WordCount.csproj.CoreCompileInputs.cache
+E:\Gitprogram\WordCount\201731062415\WordCount\obj\Debug\WordCount.exe
+E:\Gitprogram\WordCount\201731062415\WordCount\obj\Debug\WordCount.pdb

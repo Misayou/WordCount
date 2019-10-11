@@ -22,7 +22,7 @@ namespace WordCount
         {
             FileInfo fileInfo = new FileInfo(path);
             StreamWriter sw = fileInfo.AppendText();
-            sw.WriteLine("文本基础信息如下");
+            sw.WriteLine("文本基础信息如下(其中words统计了小于等于4个字母的)");
             foreach(KeyValuePair<string, int> entry in context.BaseInfo)
             {
                 sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
