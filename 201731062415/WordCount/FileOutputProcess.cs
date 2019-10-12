@@ -23,12 +23,17 @@ namespace WordCount
         public override bool process(Context context)
         {
             FileInfo fileInfo = new FileInfo(path);
+            
             StreamWriter sw = fileInfo.AppendText();
+
             sw.WriteLine("文本基础信息如下(其中words统计了小于等于4个字母的)");
             foreach(KeyValuePair<string, int> entry in context.BaseInfo)
             {
                 sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
             }
+
+            
+
             sw.WriteLine("单词统计信息：");
             //按字典序排序
             context.WordCount=context.WordCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
@@ -42,6 +47,13 @@ namespace WordCount
                 {
                     break;
                 }
+            }
+
+            sw.WriteLine("词组统计信息：");
+            context.GroupCount = context.GroupCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+            foreach (KeyValuePair<string, int> entry in context.GroupCount)
+            {
+                sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);
             }
             sw.Close();
             return true;

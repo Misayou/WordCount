@@ -18,6 +18,31 @@ namespace WordCount
         {
             this.m = m;
         }
+
+
+        public void countWordGroup(Context context ,int m)
+        {
+                string[] words = Regex.Split(context.FileInfo, @"\W+");
+                for (int i = 0; i < words.Length - m; i++)
+                {
+                    string wordGroup = null;
+                    for (int j = i; j < i+m; j++)
+                    {
+                        wordGroup = wordGroup+words[j]+" ";
+                    }
+                    
+                    if (context.GroupCount.ContainsKey(wordGroup))
+                    {
+                        context.GroupCount[wordGroup]++;
+                    }
+                    else
+                    {
+                        context.GroupCount[wordGroup] = 1;
+                    }
+                }
+
+        }
+
         /// <summary>
         /// 统计字符数数量
         /// </summary>
@@ -95,7 +120,11 @@ namespace WordCount
             countChar(context);
             countWords(context);
             countLines(context);
-
+            if(m != -1)
+            {
+                countWordGroup(context, m);
+            }
+            
             
             //交由下一步处理
             getNextHandler().process(context);
