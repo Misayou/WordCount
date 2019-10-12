@@ -36,7 +36,7 @@ namespace WordCount
 
             sw.WriteLine("单词统计信息：");
             //按字典序排序
-            context.WordCount=context.WordCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
             int count = 0;
 
             foreach (KeyValuePair<string, int> entry in context.WordCount)
@@ -50,7 +50,7 @@ namespace WordCount
             }
 
             sw.WriteLine("词组统计信息：");
-            context.GroupCount = context.GroupCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
             foreach (KeyValuePair<string, int> entry in context.GroupCount)
             {
                 sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);

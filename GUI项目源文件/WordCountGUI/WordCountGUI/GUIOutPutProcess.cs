@@ -33,7 +33,7 @@ namespace WordCountGUI
 
             Form1.form.wordCountTextBox.Text += "单词统计信息\r\n";
             //按字典序排序
-            context.WordCount = context.WordCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
             int count = 0;
             foreach (KeyValuePair<string, int> entry in context.WordCount)
             {
@@ -50,7 +50,7 @@ namespace WordCountGUI
                 return true;
             }
             Form1.form.wordCountTextBox.Text += "词组统计信息\r\n";
-            context.GroupCount = context.GroupCount.OrderBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
             foreach (KeyValuePair<string, int> entry in context.GroupCount)
             {
                 Form1.form.wordCountTextBox.Text += entry.Key.ToLower() + ":" + entry.Value + "\r\n";
