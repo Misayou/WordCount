@@ -1,0 +1,10 @@
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\bin\Debug\WordCountGUI.exe.config
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\bin\Debug\WordCountGUI.exe
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\bin\Debug\WordCountGUI.pdb
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.csprojAssemblyReference.cache
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.Form1.resources
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.Properties.Resources.resources
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.csproj.GenerateResource.cache
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.csproj.CoreCompileInputs.cache
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.exe
+F:\学习资料\系统分析与设计\结对编程仓库\GUI\WordCountGUI\WordCountGUI\obj\Debug\WordCountGUI.pdb
