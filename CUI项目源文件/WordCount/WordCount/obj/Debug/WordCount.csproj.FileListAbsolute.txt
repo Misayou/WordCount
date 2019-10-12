@@ -4,3 +4,10 @@ F:\学习资料\系统分析与设计\结对编程仓库\WordCount\CUI项目源�
 F:\学习资料\系统分析与设计\结对编程仓库\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.csproj.CoreCompileInputs.cache
 F:\学习资料\系统分析与设计\结对编程仓库\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.exe
 F:\学习资料\系统分析与设计\结对编程仓库\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.pdb
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\bin\Debug\WordCount.exe.config
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\bin\Debug\WordCount.exe
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\bin\Debug\WordCount.pdb
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.csproj.CoreCompileInputs.cache
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.exe
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.pdb
+E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.csprojAssemblyReference.cache

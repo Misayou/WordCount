@@ -18,18 +18,28 @@ namespace WordCount
             int n=-1; //输出的单词的数量
             for(int i = 0; i < args.Length-1; i++)
             {
-                if ("-i".Equals(args[i]))
+                try
                 {
-                    inPath = args[i + 1];
-                }else if ("-o".Equals(args[i]))
+                    if ("-i".Equals(args[i]))
+                    {
+                        inPath = args[i + 1];
+                    }
+                    else if ("-o".Equals(args[i]))
+                    {
+                        outPath = args[i + 1];
+                    }
+                    else if ("-m".Equals(args[i]))
+                    {
+                        m = int.Parse(args[i + 1]);
+                    }
+                    else if ("-n".Equals(args[i]))
+                    {
+                        n = int.Parse(args[i + 1]);
+                    }
+                }
+                catch
                 {
-                    outPath = args[i + 1];
-                }else if ("-m".Equals(args[i]))
-                {
-                    m = int.Parse(args[i + 1]);
-                }else if ("-n".Equals(args[i]))
-                {
-                    n = int.Parse(args[i + 1]);
+                    Console.WriteLine("请输入正确的指令，如-i,-o,-m或-n");
                 }
             }
             if ("".Equals(inPath) || "".Equals(outPath))

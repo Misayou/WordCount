@@ -72,11 +72,11 @@ namespace WordCount
             context.BaseInfo.Add("words", 0);
             foreach (string word in words)
             {
-                if (word != "")
+                if (word.Length >= 4)
                 {
                     context.BaseInfo["words"]++;
                 } 
-                if(word.Length >= 4)
+                if(word != "")
                 {
                     if (context.WordCount.ContainsKey(word))
                     {

@@ -26,36 +26,48 @@ namespace WordCount
             
             StreamWriter sw = fileInfo.AppendText();
 
-            sw.WriteLine("文本基础信息如下(其中words统计了小于等于4个字母的)");
-            foreach(KeyValuePair<string, int> entry in context.BaseInfo)
+            try
             {
-                sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
-            }
-
-            
-
-            sw.WriteLine("单词统计信息：");
-            //按字典序排序
-            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
-            int count = 0;
-
-            foreach (KeyValuePair<string, int> entry in context.WordCount)
-            {
-                sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);
-                count++;
-                if ((count == n)&&n!=-1)
+                sw.WriteLine("文本基础信息如下(其中words统计了小于等于4个字母的)");
+                foreach (KeyValuePair<string, int> entry in context.BaseInfo)
                 {
-                    break;
+                    sw.WriteLine("{0}:{1}", entry.Key, entry.Value);
+                }
+
+
+
+                sw.WriteLine("单词统计信息：");
+                //按字典序排序
+                context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+                int count = 0;
+
+                foreach (KeyValuePair<string, int> entry in context.WordCount)
+                {
+                    sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);
+                    count++;
+                    if ((count == n) && n != -1)
+                    {
+                        break;
+                    }
+                }
+
+                sw.WriteLine("词组统计信息：");
+                context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
+                foreach (KeyValuePair<string, int> entry in context.GroupCount)
+                {
+                    sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);
                 }
             }
-
-            sw.WriteLine("词组统计信息：");
-            context.WordCount = context.WordCount.OrderByDescending(o => o.Value).ThenBy(o => o.Key).ToDictionary(o => o.Key, o => o.Value);
-            foreach (KeyValuePair<string, int> entry in context.GroupCount)
+            catch (Exception e)
             {
-                sw.WriteLine("{0}:{1}", entry.Key.ToLower(), entry.Value);
+                Console.WriteLine("输出文件错误！");
             }
-            sw.Close();
+            finally
+            {
+                sw.Flush();
+                sw.Close();
+            }
+            
             return true;
         }
     }
