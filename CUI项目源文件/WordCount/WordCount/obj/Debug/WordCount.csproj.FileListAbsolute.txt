@@ -11,3 +11,4 @@ E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCou
 E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.exe
 E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.pdb
 E:\Gitprogram\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.csprojAssemblyReference.cache
+F:\学习资料\系统分析与设计\结对编程仓库\WordCount\CUI项目源文件\WordCount\WordCount\obj\Debug\WordCount.csprojAssemblyReference.cache

@@ -9,7 +9,7 @@ namespace WordCount
     /// <summary>
     /// 统计文本中的单词信息
     /// </summary>
-    class AnalyzeProcess : Handler
+    public class AnalyzeProcess : Handler
     {
 
 
@@ -66,7 +66,7 @@ namespace WordCount
         /// 统计每个单词出现的次数
         /// </summary>
         /// <param name="context"></param>
-        private void countWords(Context context)
+        public void countWords(Context context)
         {
             string[] words = Regex.Split(context.FileInfo, @"\W+");
             context.BaseInfo.Add("words", 0);
@@ -97,7 +97,7 @@ namespace WordCount
         /// 统计文本的行数
         /// </summary>
         /// <param name="context"></param>
-        private void countLines(Context context)
+        private  void countLines(Context context)
         {
 
             MatchCollection mch = Regex.Matches(context.FileInfo, "\n");
@@ -117,6 +117,7 @@ namespace WordCount
         {
 
             //统计文本的各种信息
+         
             countChar(context);
             countWords(context);
             countLines(context);
