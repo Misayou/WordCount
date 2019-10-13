@@ -9,7 +9,7 @@ namespace WordCount
     /// <summary>
     /// 上下文信息
     /// </summary>
-    class Context
+    public class Context
     {
         /// <summary>
         /// 文本内容

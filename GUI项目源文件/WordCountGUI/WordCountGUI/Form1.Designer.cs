@@ -180,6 +180,8 @@
             this.Controls.Add(this.baseInfoTextBox);
             this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.beginButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "单词统计器";
             this.ResumeLayout(false);

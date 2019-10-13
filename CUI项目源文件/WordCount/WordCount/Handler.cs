@@ -9,7 +9,7 @@ namespace WordCount
     /// <summary>
     /// 抽象处理器
     /// </summary>
-    abstract class Handler
+    public abstract class Handler
     {
         /// <summary>
         /// 进行下一步处理的处理器

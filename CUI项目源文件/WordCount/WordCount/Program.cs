@@ -46,7 +46,7 @@ namespace WordCount
             {
                 Console.WriteLine("请输入正确的命令");
             }
-            Console.WriteLine("inpath:" + inPath + "outpath" + outPath + "m:" + m + "n" + n);
+           
 
             Context context = new Context();
            
